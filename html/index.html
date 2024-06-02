@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>images</title>
+    <style>
+      .head-3 {
+        width: auto;
+        height: 30px;
+        background-color: black;
+        border-radius: 4px;
+        color: white;
+        text-align: center;
+        align-items: center;
+      }
+      .chng-btn {
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 5px;
+        color: black;
+        padding-top: 10px;
+        background-color: #fcf6bd;
+        border-radius: 4px;
+        margin-top: 50px;
+        cursor: pointer;
+        border: 2px solid black;
+      }
+
+      body {
+        background-color: #ffafcc;
+        align-items: center;
+        text-align: center;
+      }
+      .main-img {
+        width: auto;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head-3">
+      <h3>Lets changing the images the presing the button</h3>
+    </div>
+
+    <div class="">
+      <img
+        src="/all_in_one/imges/image_1.jpg"
+        alt=""
+        id="main-img"
+        class="main-img"
+      />
+    </div>
+    <div id="chng-btn" class="chng-btn">click for Change</div>
+    <div id="chng-btn2" class="chng-btn">click</div>
+
+    <script>
+      let chng_btn = document.getElementById("chng-btn");
+      let chng_btn2 = document.getElementById("chng-btn2");
+      let main_img = document.getElementById("main-img");
+
+      chng_btn2.addEventListener("click", anotherOne);
+      chng_btn.addEventListener("click", changeColor);
+
+      function changeColor(e) {
+        let change = (chng_btn.textContent = "click for another picture ");
+        let img_change = (main_img.src = "/all_in_one/imges/image_1.jpg");
+      }
+
+      function anotherOne(e) {
+        let change2 = (chng_btn2.textContent = "click for  ");
+
+        let img_change2 = (main_img.src = "/all_in_one/imges/image_5.jpg");
+      }
+    </script>
+  </body>
+</html>
